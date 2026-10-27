@@ -5,6 +5,7 @@ import com.duoc.proyectoappmovil.ui.screens.CheckInScreen
 import com.duoc.proyectoappmovil.ui.screens.HistorialScreen
 import com.duoc.proyectoappmovil.ui.screens.HomeScreen
 import com.duoc.proyectoappmovil.ui.screens.OnboardingScreen
+import com.duoc.proyectoappmovil.ui.screens.OrientacionScreen
 import com.duoc.proyectoappmovil.viewmodel.CheckInViewModel
 
 @Composable
@@ -41,6 +42,13 @@ fun AppNavigation() {
         "historial" -> {
             HistorialScreen(
                 historial = listaHistorial,
+                onVolver = {
+                    pantallaActual = "home"
+                }
+            )
+        }
+        "orientacion" -> {
+            OrientacionScreen(
                 onVolver = {
                     pantallaActual = "home"
                 }
