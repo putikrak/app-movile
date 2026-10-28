@@ -6,6 +6,7 @@ import com.duoc.proyectoappmovil.ui.screens.HistorialScreen
 import com.duoc.proyectoappmovil.ui.screens.HomeScreen
 import com.duoc.proyectoappmovil.ui.screens.OnboardingScreen
 import com.duoc.proyectoappmovil.ui.screens.OrientacionScreen
+import com.duoc.proyectoappmovil.ui.screens.ProfesionalesScreen
 import com.duoc.proyectoappmovil.viewmodel.CheckInViewModel
 
 @Composable
@@ -50,6 +51,13 @@ fun AppNavigation() {
         "Orientacion" -> {
             OrientacionScreen(
                 onVolver = {
+                    pantallaActual = "home"
+                }
+            )
+        }
+        "Profesionales" -> {
+            ProfesionalesScreen(
+                onVolver ={
                     pantallaActual = "home"
                 }
             )
