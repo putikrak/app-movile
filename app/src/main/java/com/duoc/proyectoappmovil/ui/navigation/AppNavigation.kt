@@ -2,6 +2,7 @@ package com.duoc.proyectoappmovil.ui.navigation
 
 import androidx.compose.runtime.*
 import com.duoc.proyectoappmovil.ui.screens.CheckInScreen
+import com.duoc.proyectoappmovil.ui.screens.EmergenciaScreen
 import com.duoc.proyectoappmovil.ui.screens.HistorialScreen
 import com.duoc.proyectoappmovil.ui.screens.HomeScreen
 import com.duoc.proyectoappmovil.ui.screens.OnboardingScreen
@@ -57,6 +58,13 @@ fun AppNavigation() {
         }
         "Profesionales" -> {
             ProfesionalesScreen(
+                onVolver ={
+                    pantallaActual = "home"
+                }
+            )
+        }
+        "emergencia" -> {
+            EmergenciaScreen(
                 onVolver ={
                     pantallaActual = "home"
                 }
