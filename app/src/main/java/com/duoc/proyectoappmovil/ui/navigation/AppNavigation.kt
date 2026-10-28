@@ -47,7 +47,7 @@ fun AppNavigation() {
                 }
             )
         }
-        "orientacion" -> {
+        "Orientacion" -> {
             OrientacionScreen(
                 onVolver = {
                     pantallaActual = "home"
