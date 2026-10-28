@@ -55,7 +55,7 @@ fun AppNavigation() {
                 }
             )
         }
-        "profesionales" -> {
+        "Profesionales" -> {
             ProfesionalesScreen(
                 onVolver ={
                     pantallaActual = "home"
