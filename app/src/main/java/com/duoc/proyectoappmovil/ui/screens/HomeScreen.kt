@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.duoc.proyectoappmovil.ui.theme.FondoSecundario
 import com.duoc.proyectoappmovil.ui.theme.NavyPrincipal
+import com.duoc.proyectoappmovil.ui.theme.VerdeContinuidad
 
 @Composable
 fun HomeScreen(
@@ -34,7 +35,6 @@ fun HomeScreen(
                 .padding(20.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            // Header: Saludo
             Text(
                 text = "¡Hola, Usuario Demo! 👋",
                 fontSize = 24.sp,
@@ -49,7 +49,6 @@ fun HomeScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // Tarjeta 1: Check-in Emocional Diario
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFDDF6F0)),
                 shape = RoundedCornerShape(16.dp),
@@ -81,7 +80,6 @@ fun HomeScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Tarjeta 2: Orientación Conversacional
             Card(
                 colors = CardDefaults.cardColors(containerColor = NavyPrincipal),
                 shape = RoundedCornerShape(16.dp),
@@ -107,19 +105,33 @@ fun HomeScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Tarjeta 3: Tu Próximo Paso
+            // Tarjeta 3: Tu Próximo Paso (Ahora interactiva)
             Card(
                 colors = CardDefaults.cardColors(containerColor = FondoSecundario),
                 shape = RoundedCornerShape(16.dp),
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onNavegarA("orientacion") } // <--- Agregamos la navegación
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = "🎯 Tu próximo paso sugerido",
-                        fontWeight = FontWeight.Bold,
-                        color = NavyPrincipal,
-                        fontSize = 14.sp
-                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "🎯 Tu próximo paso sugerido",
+                            fontWeight = FontWeight.Bold,
+                            color = NavyPrincipal,
+                            fontSize = 14.sp
+                        )
+                        Text(
+                            text = "Ver →",
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = VerdeContinuidad
+                        )
+                    }
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "Pausa de respiración consciente (2 minutos)",

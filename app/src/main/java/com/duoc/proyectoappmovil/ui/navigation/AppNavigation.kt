@@ -49,14 +49,14 @@ fun AppNavigation() {
                 }
             )
         }
-        "Orientacion" -> {
+        "orientacion" -> {
             OrientacionScreen(
                 onVolver = {
                     pantallaActual = "home"
                 }
             )
         }
-        "Profesionales" -> {
+        "profesionales" -> {
             ProfesionalesScreen(
                 onVolver ={
                     pantallaActual = "home"
